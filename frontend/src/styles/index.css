@@ -1,0 +1,156 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+/* Container Styles */
+.auth-container,
+.dashboard {
+  max-width: 720px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* Inputs & Buttons */
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #111827;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Notes */
+.note-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+
+body.dark .note-card {
+  background: #374151;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Note Actions */
+.note-actions {
+  margin-top: 1rem;
+}
+
+.note-actions button {
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #f59e0b;
+}
+
+.note-actions button:last-child {
+  background-color: #ef4444;
+}
+
+.note-actions button:hover {
+  opacity: 0.9;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Theme + Search */
+.theme-toggle {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.theme-toggle button {
+  background: #10b981;
+}
+
+input[type="search"] {
+  flex: 1;
+}
+
+/* Error Message */
+.error-msg {
+  color: #ef4444;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .theme-toggle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
