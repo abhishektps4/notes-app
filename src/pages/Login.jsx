@@ -14,9 +14,13 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post(import.meta.env.VITE_API + '/auth/login', { email, password },
-        {withCredentials:true}
-      );
+      const res = await axios.post(`${import.meta.env.VITE_API}/auth/login`, {
+  email,
+  password
+}, {
+  withCredentials: true
+});
+
       login(res.data.user, res.data.token);
       navigate('/');
     } catch (err) {
